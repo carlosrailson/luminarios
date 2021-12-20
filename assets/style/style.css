@@ -133,14 +133,14 @@ a:hover {
 .sobre-nos {
   height: 100vh;
   background-color: #fff;
-  padding-top: 4rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   gap: 5rem;
 }
 
 .sobre-nos h2::after,
-.galeria h3::after {
+.produtos h2::after {
   content: "";
   width: 3rem;
   height: 0.2rem;
@@ -149,7 +149,8 @@ a:hover {
   margin: 0.5rem 0 1.5rem 0;
 }
 
-.sobre-nos h2 {
+.sobre-nos h2,
+.produtos h2 {
   font-size: 2.5rem;
 }
 
@@ -173,10 +174,59 @@ a:hover {
 .sobre-nos-imagem {
   min-width: 23rem;
   height: max-content;
-  background-color: #ffe177;
-  border-radius: 0.5rem;
+  display: flex;
+  margin: 2rem auto;
 }
 
-.maquina {
-  border-radius: 0.5rem;
+.sobre-nos-imagem img {
+  border-radius: 1rem;
+  /* margin-bottom: 11vh; */
+  border-bottom: .4rem solid #ffe177;
+}
+
+.portfolio {
+  color: #fff;
+  background-color: #7b3b71;
+}
+
+.produtos h2{
+  padding-top: 2rem;
+}
+
+.produtos-galeria {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.produtos-galeria img {
+  border-radius: .5rem;
+}
+
+.produtos-caneca,
+.produtos-azulejo,
+.produtos-camisa {
+  width: 20rem;
+  background-color: #683160;
+  padding: 1rem;
+  margin: 0 0 3rem 0;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: .4rem solid #582951;
+}
+
+.produtos-p {
+  padding: 1rem 0;
+}
+.produtos-galeria a {
+  border: 0.11rem solid #fff;
+  padding: 0.5rem 0.7rem;
+}
+
+.produtos-galeria a:hover {
+  border: 0.11rem solid transparent;
 }
