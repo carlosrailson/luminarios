@@ -83,6 +83,11 @@ a:hover {
   color: #ffe177;
 }
 
+.menu-mobile {
+  width: 2rem;
+  display: none;
+}
+
 .menu {
   list-style-type: none;
   padding: 0;
@@ -200,6 +205,7 @@ a:hover {
   justify-content: space-between;
   gap: 1rem;
   margin-top: 3rem;
+  /* background-color: #ffe177; */
 }
 
 .produtos-galeria img {
@@ -221,6 +227,14 @@ a:hover {
   border-bottom: 0.4rem solid #666;
 }
 
+.produtos-caneca:hover,
+.produtos-azulejo:hover,
+.produtos-camisa:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px #000;
+  /* width: 20.2rem; */
+}
+
 .produtos-p {
   padding: 1rem 0;
 }
@@ -234,101 +248,86 @@ a:hover {
 }
 
 .comprar {
-  /* height: 100vh; */
+  height: 100vh;
   padding-top: 3rem;
   font-size: 1.3rem;
   line-height: 1.5;
   /* color: #EE4D30; */
 }
 
-.onde-comprar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  height: 30rem;
-  background-color: #f9f0ee77;
-  border-radius: 1rem;
-  /* width: max-content; */
-  /* padding-right: 4rem; */
-  /* width: 25rem; */
-  height: max-content;
-  margin-bottom: 3rem;
-}
-
-.onde-comprar a {
-  color: #555;
-  background-color: #f9f0ee;
-  font-size: 1.3rem;
-  border: 0.11rem solid #555;
-  padding: 0.5rem 0.7rem;
-  display: block;
-}
-
-.onde-comprar a:hover {
-  background-color: #ffe177;
-}
-
-.shopee {
-  max-width: 20rem;
-  background-color: #f9f0ee;
-  border-radius: 1rem;
-}
-
-.shopee a {
-  border: 0;
-  border-radius: 1rem;
-}
-
-.shopee:hover {
-  background-color: #e9e0de;
-  cursor: pointer;
-}
-
-.porque-shopee {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 3rem;
-  padding-right: 3rem;
-  /* background-color: #f9f0ee; */
-}
-
-.onde-comprar-wp {
-  display: flex;
-  flex-direction: row-reverse;
-  padding-right: 0;
-  padding-left: 3rem;
-  margin-bottom: 3rem;
-}
-
-.wpimg img {
-  /* max-width: 50rem; */
-  padding: 3rem;
-}
-
-.linkzap {
-  display: flex;
-  align-items: flex-start;
-}
-
 .contato {
   height: 100vh;
   background-color: #222;
-  background: url("../img/canecaoriginal6.jpg");
-  background-size: cover;
+  background: url("../img/lampada3.jpg");
+  background-size: auto;
+  background-position: right;
+  color: #888;
 }
 
+.icons-contato {
+  /* width: 100%; */
+  padding-top: 12rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.icons {
+  width: 40rem;
+  /* background-color: turquoise; */
+}
+
+.icon-img img {
+  width: 3rem;
+  display: flex;
+  font-size: 2rem;
+}
+
+.icon-img a {
+  font-size: 2rem;
+  display: flex;
+  background-color: transparent;
+}
+
+.icon-img a:hover {
+  color: #888;
+  box-shadow: transparent;
+}
 @media (max-width: 1140px) {
   .container {
     margin: 0 1rem;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .menu-mobile:hover {
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .title h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+
+  .title p {
+    font-size: 1.5rem;
   }
 
   .sobre-nos-resumo {
     font-size: 1.2rem;
   }
 
-  .fa-quote-left, .fa-quote-right {
+  .fa-quote-left,
+  .fa-quote-right {
     font-size: 2rem;
   }
 
@@ -338,8 +337,9 @@ a:hover {
 
   .onde-comprar {
     font-size: 1.1rem;
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    /* float: left; */
     /* justify-content: center; */
     /* align-items: center; */
     /* gap: 2rem; */
@@ -353,4 +353,69 @@ a:hover {
     margin-bottom: 3rem; */
   }
 
+  .icons {
+    width: 100%;
+    /* background-color: turquoise; */
+  }
+}
+
+@media (max-width: 900px) {
+  .sobre-nos-imagem {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .produtos {
+    /* margin: 0 auto; */
+  }
+  .produtos-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+
+  .produtos-caneca,
+  .produtos-azulejo,
+  .produtos-camisa {
+    width: 80%;
+    margin: 1rem auto;
+    /* padding-bottom: 10rem; */
+  }
+
+  .icons-contato {
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .icons {
+    width: 100%;
+    font-size: 1rem;
+    /* background-color: turquoise; */
+  }
+  
+  .icon-img img {
+    width: 2rem;
+  }
+
+  .icon-img a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .produtos-caneca,
+  .produtos-azulejo,
+  .produtos-camisa {
+    width: 100%;
+  }
+
+  .icon-img img {
+    width: 1.7rem;
+  }
+
+  .icon-img a {
+    font-size: 1.1rem;
+  }
 }
